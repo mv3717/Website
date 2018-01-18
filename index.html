@@ -1,0 +1,37 @@
+<!doctype html>
+
+<head>
+
+	<link rel="stylesheet" type="text/css" href="main.css">
+
+<title> My Webpage </title>
+</head>
+
+	<body>
+
+<h1> My Website </h1>
+
+<ul>
+	<li>Home</li>
+	<li> <a href="page2.html"> page 2 </a> </li>
+	<li> <a href="page3.html"> page 3 </a> </li>
+	<li> <a href="snake.html"> Snake </a> </li>
+</ul>
+
+<button onclick="myFunction()">Generate</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+	var x = Math.floor(Math.random() * 10000000) + 1  ;
+	document.getElementById("demo").innerHTML = x;
+}
+
+
+</script>
+
+
+
+
+</html>

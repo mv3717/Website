@@ -1,0 +1,31 @@
+body {
+	background:#FFFFFF
+}
+
+li {
+	font-family: Arial;
+	padding: 10px;
+	background:#777
+}
+
+h1 {
+	color: blue;
+	font-family: Arial;
+}
+
+p {
+	font-family: Arial;
+	padding: 10px;
+}
+
+button {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+Try it Yourself »
