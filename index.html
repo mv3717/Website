@@ -1,38 +1,22 @@
 <!doctype html> 
 
-<! -- test push >
-
 <head>
-
-	<link rel="stylesheet" type="text/css" href="main.css">
-
+<link rel="stylesheet" type="text/css" href="main.css">
 <title> My Webpage </title>
 </head>
-
 	<body>
-
-<h1> My Website </h1>
-
-<ul>
-	<li>Home</li>
-	<li> <a href="page2.html"> page 2 </a> </li>
-	<li> <a href="page3.html"> page 3 </a> </li>
-	<li> <a href="snake.html"> Snake </a> </li>
+		<ul>
+  <li><a href="index.html">Home</a></li>
+  <li class="dropdown">
+    <a href="javascript:void(0)" class="dropbtn">Dropdown</a>
+    <div class="dropdown-content">
+      <a href="page2.html">Page 2</a>
+      <a href="page3.html">Life Calculator</a>
+      <a href="snake.html">Snake</a>
+    </div>
+    <li><a href="#about">About</a></li>
+  </li>
 </ul>
-
-<button onclick="myFunction()">Generate</button>
-
-<p id="demo"></p>
-
-<script>
-function myFunction() {
-	var x = Math.floor(Math.random() * 10000000) + 1  ;
-	document.getElementById("demo").innerHTML = x;
-}
-
-
-</script>
-
 
 
 
