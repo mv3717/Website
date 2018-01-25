@@ -31,7 +31,12 @@ Name: <input name="name" type="text" size="20">
 <br>
 <button onclick="timeLived()">Submit</button>
 <br>
-<p id="yearsLived"></p>
+<p id="weeksLived"></p>
+<p id="daysLived"></p>
+<p id="hoursLived"></p>
+<p id="minutesLived"></p>
+<p id="secondsLived"></p>
+
 <p id = "age"></p>
 </div>
 
@@ -43,12 +48,29 @@ document.getElementById("name").innerHTML = name;
 function timeLived() {
 var dateControl = document.querySelector('input[id="bday"]').value;
 var dOfB = new Date(dateControl)
-var yearOfBirth = dOfB.getFullYear();
-//document.getElementById("age").innerHTML = dOfB;
 var date = new Date();
-var year = date.getFullYear();
-var yearsLived = (year - yearOfBirth);
-document.getElementById("yearsLived").innerHTML = "You have lived " + yearsLived + " years" ;
+
+// datepart: 'y', 'm', 'w', 'd', 'h', 'n', 's'
+Date.dateDiff = function(datepart, fromdate, todate) {	
+  datepart = datepart.toLowerCase();	
+  var diff = todate - fromdate;	
+  var divideBy = { w:604800000, 
+                   d:86400000, 
+                   h:3600000, 
+                   m:60000, 
+                   s:1000 };	
+  
+  return Math.floor( diff/divideBy[datepart]);
+}
+//Set the two dates
+// var y2k  = new Date(2000, 0, 1);
+// var today= new Date();
+//document.write('Weeks since the new millenium: ' + Date.dateDiff('w', y2k, today)); //displays 625
+document.getElementById("weeksLived").innerHTML = "You have lived " + Date.dateDiff('w', dOfB, date) + " weeks";
+document.getElementById("daysLived").innerHTML = "You have lived " + Date.dateDiff('d', dOfB, date) + " days";
+document.getElementById("hoursLived").innerHTML = "You have lived " + Date.dateDiff('h', dOfB, date) + " hours";
+document.getElementById("minutesLived").innerHTML = "You have lived " + Date.dateDiff('m', dOfB, date) + " minutes";
+document.getElementById("secondsLived").innerHTML = "You have lived " + Date.dateDiff('s', dOfB, date) + " seconds";
 }
 </script>
 </body>
