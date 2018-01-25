@@ -14,10 +14,55 @@
 
 <ul>
 	<li><a href="index.html"> Home </a></li>
-	<li> <a href="page2.html"> page 3 </a>  </li>
+	<li> <a href="page2.html"> page 2 </a>  </li>
 	<li> This is page 3 </li>
 </ul>
 
+<form id = "form1">
+Name: <input name="name" type="text" size="20">
+</form>
+
+<button onclick="outputName()">Submit</button>
+
+<br>
+
+<label for="bday">Please enter date of birth:</label>
+    <input type="date" id="bday" name="bday">
+
+    <br>
+
+<button onclick="outputDofB()">Submit</button>
+
+<br>
+
+<script>
+
+function outputName() {
+
+var name = document.getElementById("form1").elements["name"].value;
+
+document.getElementById("name").innerHTML = name;
+}
+
+function outputDofB() {
+
+var dateControl = document.querySelector('input[id="bday"]');
+
+document.getElementById("age").innerHTML = dateControl.value;
+
+}
+
+</script>
+
+<p id = "name"></p>
+
+<br>
+
+<p id = "age"></p>
+
+
 </body>
+
+
 
 </html>
